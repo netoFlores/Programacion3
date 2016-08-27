@@ -10,8 +10,18 @@ public class Carro {
     private String marca;
     private String modelo;
     private int annion;
+    private Integer velocidad;
+
+    public Integer getVelocidad() {
+        return velocidad;
+    }
+
+    public void setVelocidad(Integer velocidad) {
+        this.velocidad = velocidad;
+    }
     
     public Carro(){
+        velocidad = 0;
     }
     
     public  Carro(String color, String marca, String modelo, int annion){
@@ -19,6 +29,7 @@ public class Carro {
         this.marca = marca;
         this.modelo = modelo;
         this.annion = annion;
+        velocidad = 0;
     }
     
     public String getColor(){
@@ -66,10 +77,13 @@ public class Carro {
     
     public void acceledar(){
         System.out.println("Acceledar");
+        velocidad += 10;
+        
     }
     
     public void frenar(){
         System.out.println("Frenar");
+        velocidad -= 10;
     }
 }
 
